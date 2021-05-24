@@ -1,7 +1,5 @@
 function calculateTotalWeight(data) {
   const totals = [];
-
-  // Sums up the total weight for each workout so that it can be displayed properly in the bar graph
   data.forEach((workout) => {
     const workoutTotal = workout.exercises.reduce((total, { type, weight }) => {
       if (type === 'resistance') {
@@ -18,9 +16,6 @@ function calculateTotalWeight(data) {
 
 function populateChart(data) {
 
-  // Each workout can have multiple exercises
-  // A workout is the sum of the duration of all the exercises in it
-
   const durationArr = [];
 
   data.forEach((workout) => {
@@ -28,7 +23,7 @@ function populateChart(data) {
       return total + duration;
     }, 0);
 
-  durationArr.push(durationTotal);
+    durationArr.push(durationTotal);
   });
 
   const pounds = calculateTotalWeight(data);
@@ -36,11 +31,11 @@ function populateChart(data) {
   const line = document.querySelector('#canvas').getContext('2d');
   const bar = document.querySelector('#canvas2').getContext('2d');
 
-  // "date" matches the date in the Workout model
+
   const labels = data.map(({ date }) => {
     const dateValue = new Date(date);
 
-    // Use JavaScript's `Intl` object to help format dates
+
     return new Intl.DateTimeFormat('en-US', {
       weekday: 'short',
       month: 'short',
@@ -122,5 +117,5 @@ function populateChart(data) {
   });
 }
 
-// Get all workout data from the back-end of the site
+
 API.getWorkoutsInRange().then(populateChart);

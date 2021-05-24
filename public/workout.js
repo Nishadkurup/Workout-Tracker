@@ -6,11 +6,10 @@ async function initWorkout() {
       .querySelector("a[href='/exercise?']")
       .setAttribute("href", `/exercise?id=${lastWorkout._id}`);
 
-    // Sums up the total duration of exercises to update the "Last Workout" on the front-end
 
     let sum = 0;
 
-    for(let i = 0; i < lastWorkout.exercises.length; i++) {
+    for (let i = 0; i < lastWorkout.exercises.length; i++) {
       sum += lastWorkout.exercises[i].duration;
     }
 
@@ -60,12 +59,8 @@ function renderWorkoutSummary(summary) {
     const strong = document.createElement("strong");
 
     strong.textContent = workoutKeyMap[key];
+
     let textNode = document.createTextNode(`: ${summary[key]}`);
-
-    // The last workout may or may not include distance (i.e. it could be a resistance workout)
-    // But if it does include distance, this modifies the textNode to include units
-    // The same holds true for totalWeight
-
     if (key === 'totalDistance') {
       textNode = document.createTextNode(`: ${summary[key]} miles`);
     }

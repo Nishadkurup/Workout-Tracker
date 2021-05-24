@@ -41,7 +41,7 @@ const workoutSeed = [
   },
   {
     date: new Date(new Date().setDate(new Date().getDate() - 7)),
-    formatted_date: moment(new Date(new Date().setDate(new Date().getDate() - 7))).format('MMMM Do YYYY'), 
+    formatted_date: moment(new Date(new Date().setDate(new Date().getDate() - 7))).format('MMMM Do YYYY'),
     exercises: [
       {
         type: 'resistance',
@@ -137,10 +137,8 @@ const workoutSeed = [
   },
 ];
 
-// deleteMany will remove the workoutSeeds (if they have already been added to the database) before then inserting them to avoid duplicates
-
 Workout.deleteMany({})
-  .then(() => Workout.collection.insertMany(workoutSeed)) // Workout.collection is important syntax here to ensure the records are inserted properly
+  .then(() => Workout.collection.insertMany(workoutSeed))
   .then((data) => {
     console.log(data.result.n + ' records inserted!');
     process.exit(0);

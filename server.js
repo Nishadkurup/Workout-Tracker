@@ -1,4 +1,4 @@
-// Dependencies are used to run the Express server, use Mongoose, log requests in an easy-to-read format, and use the public folder
+// Dependencies are used to run the Express server, use Mongoose
 const path = require('path');
 const express = require("express");
 const logger = require("morgan");
@@ -16,7 +16,6 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
-// Connects to the MongoDB database depending on the environment
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Workout-Tracker", {
   useNewUrlParser: true,
   useFindAndModify: false,
