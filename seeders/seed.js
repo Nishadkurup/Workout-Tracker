@@ -12,8 +12,8 @@ mongoose.connect('mongodb://localhost/Workout-Tracker', {
 
 const workoutSeed = [
   {
-    date: new Date(new Date().setDate(new Date().getDate() - 9)),
-    formatted_date: moment(new Date(new Date().setDate(new Date().getDate() - 9))).format('MMMM Do YYYY'),
+    date: new Date(new Date().setDate(new Date().getDate() - 8)),
+    formatted_date: moment(new Date(new Date().setDate(new Date().getDate() - 8))).format('MMMM Do YYYY'),
     exercises: [
       {
         type: 'resistance',
@@ -26,8 +26,8 @@ const workoutSeed = [
     ],
   },
   {
-    date: new Date(new Date().setDate(new Date().getDate() - 8)),
-    formatted_date: moment(new Date(new Date().setDate(new Date().getDate() - 8))).format('MMMM Do YYYY'),
+    date: new Date(new Date().setDate(new Date().getDate() - 7)),
+    formatted_date: moment(new Date(new Date().setDate(new Date().getDate() - 7))).format('MMMM Do YYYY'),
     exercises: [
       {
         type: 'resistance',
@@ -40,8 +40,8 @@ const workoutSeed = [
     ],
   },
   {
-    date: new Date(new Date().setDate(new Date().getDate() - 7)),
-    formatted_date: moment(new Date(new Date().setDate(new Date().getDate() - 7))).format('MMMM Do YYYY'),
+    date: new Date(new Date().setDate(new Date().getDate() - 6)),
+    formatted_date: moment(new Date(new Date().setDate(new Date().getDate() - 6))).format('MMMM Do YYYY'),
     exercises: [
       {
         type: 'resistance',
@@ -54,8 +54,8 @@ const workoutSeed = [
     ],
   },
   {
-    date: new Date(new Date().setDate(new Date().getDate() - 6)),
-    formatted_date: moment(new Date(new Date().setDate(new Date().getDate() - 6))).format('MMMM Do YYYY'),
+    date: new Date(new Date().setDate(new Date().getDate() - 5)),
+    formatted_date: moment(new Date(new Date().setDate(new Date().getDate() - 5))).format('MMMM Do YYYY'),
     exercises: [
       {
         type: 'cardio',
@@ -66,8 +66,8 @@ const workoutSeed = [
     ],
   },
   {
-    date: new Date(new Date().setDate(new Date().getDate() - 5)),
-    formatted_date: moment(new Date(new Date().setDate(new Date().getDate() - 5))).format('MMMM Do YYYY'),
+    date: new Date(new Date().setDate(new Date().getDate() - 4)),
+    formatted_date: moment(new Date(new Date().setDate(new Date().getDate() - 4))).format('MMMM Do YYYY'),
     exercises: [
       {
         type: 'resistance',
@@ -80,27 +80,13 @@ const workoutSeed = [
     ],
   },
   {
-    date: new Date(new Date().setDate(new Date().getDate() - 4)),
-    formatted_date: moment(new Date(new Date().setDate(new Date().getDate() - 4))).format('MMMM Do YYYY'),
-    exercises: [
-      {
-        type: 'resistance',
-        name: 'Bench Press',
-        duration: 20,
-        weight: 300,
-        reps: 10,
-        sets: 4,
-      },
-    ],
-  },
-  {
     date: new Date(new Date().setDate(new Date().getDate() - 3)),
     formatted_date: moment(new Date(new Date().setDate(new Date().getDate() - 3))).format('MMMM Do YYYY'),
     exercises: [
       {
         type: 'resistance',
-        name: 'Quad Press',
-        duration: 30,
+        name: 'Bench Press',
+        duration: 20,
         weight: 300,
         reps: 10,
         sets: 4,
@@ -113,8 +99,8 @@ const workoutSeed = [
     exercises: [
       {
         type: 'resistance',
-        name: 'Bench Press',
-        duration: 20,
+        name: 'Quad Press',
+        duration: 30,
         weight: 300,
         reps: 10,
         sets: 4,
@@ -124,6 +110,20 @@ const workoutSeed = [
   {
     date: new Date(new Date().setDate(new Date().getDate() - 1)),
     formatted_date: moment(new Date(new Date().setDate(new Date().getDate() - 1))).format('MMMM Do YYYY'),
+    exercises: [
+      {
+        type: 'resistance',
+        name: 'Bench Press',
+        duration: 20,
+        weight: 300,
+        reps: 10,
+        sets: 4,
+      },
+    ],
+  },
+  {
+    date: new Date(new Date().setDate(new Date().getDate() )),
+    formatted_date: moment(new Date(new Date().setDate(new Date().getDate() ))).format('MMMM Do YYYY'),
     exercises: [
       {
         type: 'resistance',
